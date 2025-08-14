@@ -1,0 +1,42 @@
+.banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111827;
+  color: #e5e7eb;
+  padding: 16px 0;
+  z-index: 200;
+}
+
+.text a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.primary {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+

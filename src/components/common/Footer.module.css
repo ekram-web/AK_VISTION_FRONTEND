@@ -1,0 +1,28 @@
+.footer {
+  background-color: #1f2937; /* Dark gray */
+  color: #d1d5db; /* Light gray text */
+  padding: 32px 40px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.links a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: white;
+}

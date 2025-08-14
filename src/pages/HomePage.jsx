@@ -1,14 +1,24 @@
 import React from "react";
+import HeroSection from "../components/home/HeroSection";
+import FeaturedSection from "../components/home/FeaturedSection";
+import AboutSection from "../components/home/AboutSection";
+
+import CoreTechnologies from "../components/home/CoreTechnologies";
+import Newsroom from "../components/home/Newsroom";
+import WhereToBuy from "../components/home/WhereToBuy";
+// We will add NewsSection etc. later
 
 const HomePage = () => {
   return (
-    <div className="container mx-auto p-8 text-center">
-      <h1 className="text-5xl font-extrabold text-gray-800">
-        Welcome to Akvistion
-      </h1>
-      <p className="mt-4 text-lg text-gray-600">
-        The Future of Professional Surveillance.
-      </p>
+    <div>
+      <HeroSection />
+      <FeaturedSection />
+    
+      <CoreTechnologies />
+      <Newsroom />
+      <WhereToBuy />
+      <AboutSection />
+      {/* Add other sections here */}
     </div>
   );
 };
