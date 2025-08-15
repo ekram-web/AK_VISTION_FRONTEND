@@ -5,7 +5,6 @@ import MainNavbar from "./MainNavbar";
 const Navbar = () => {
   return (
     <>
-      
       <MainNavbar />
     </>
   );

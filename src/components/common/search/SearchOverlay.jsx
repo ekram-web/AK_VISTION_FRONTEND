@@ -1,5 +1,5 @@
 import React from "react";
-import { useUI } from "../../context/UIContext";
+import { useUI } from "../../../context/UIContext";
 import styles from "./SearchOverlay.module.css";
 
 const SearchOverlay = () => {
@@ -19,7 +19,12 @@ const SearchOverlay = () => {
         />
         <div className={styles.actions}>
           <button className={styles.primary}>Search</button>
-          <button className={styles.secondary} onClick={() => setIsSearchOpen(false)}>Close</button>
+          <button
+            className={styles.secondary}
+            onClick={() => setIsSearchOpen(false)}
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
@@ -27,5 +32,3 @@ const SearchOverlay = () => {
 };
 
 export default SearchOverlay;
-
-

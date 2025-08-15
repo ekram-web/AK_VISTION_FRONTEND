@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useUI } from "../../context/UIContext";
-import { mainNavigation } from "../../config/navigation";
+import { useUI } from "../../../context/UIContext";
+import { mainNavigation } from "../../../config/navigation";
 import styles from "./MainNavbar.module.css";
 // import AkvistionLogo from "../../assets/akvistion-logo.svg"; // We'll create this
 
@@ -29,7 +29,11 @@ const MainNavbar = () => {
                         <div key={idx}>
                           <div className={styles.megaColTitle}>{col.title}</div>
                           {col.links.map((l, i) => (
-                            <Link key={i} to={l.path} className={styles.megaLink}>
+                            <Link
+                              key={i}
+                              to={l.path}
+                              className={styles.megaLink}
+                            >
                               {l.label}
                             </Link>
                           ))}
@@ -45,7 +49,12 @@ const MainNavbar = () => {
 
         {/* Right side actions */}
         <div className={styles.navActions}>
-          <button className={styles.searchButton} onClick={() => setIsSearchOpen(true)}>Search</button>
+          <button
+            className={styles.searchButton}
+            onClick={() => setIsSearchOpen(true)}
+          >
+            Search
+          </button>
           <button className={styles.contactButton}>Contact Sales</button>
         </div>
       </div>

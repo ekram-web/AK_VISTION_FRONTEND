@@ -1,37 +1,151 @@
-.section { padding: 80px 0; background: #ffffff; }
+.coreTechSection {
+  padding: 80px 0;
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 }
 
-.sectionTitle { margin: 0; font-size: 3rem; font-weight: 800; }
-
-.viewMore {
-  text-decoration: none;
-  color: #0054a6;
+.sectionTitle {
+  font-size: 36px;
   font-weight: 600;
+  margin: 0;
 }
 
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.viewAllLink {
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
 
-.card { border: 1px solid #e5e7eb; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+.carouselContainer {
+  margin: 0 auto;
+  position: relative;
+}
 
-.image { height: 240px; background-size: cover; background-position: center; }
+.slide {
+  display: flex !important;
+  align-items: center;
+  gap: 60px;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  padding: 60px;
+}
 
-.content { padding: 22px 20px 24px; }
+.slideImage {
+  flex: 0 0 50%;
+}
+.slideImage img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-.title { margin: 0 0 6px; font-size: 1.375rem; font-weight: 800; }
+.slideContent {
+  flex: 0 0 50%;
+}
 
-.desc { margin: 0 0 18px; color: #4b5563; line-height: 1.55; }
+.slideTitle {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
 
-.link { color: #0b5fb8; text-decoration: none; font-weight: 800; }
+.slideDescription {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 30px;
+}
 
-/* Entrance animation similar to Hikvision's soft rise */
-.appear { opacity: 0; transform: translateY(10px); transition: opacity .35s ease, transform .35s ease; }
-.inView .appear, .appear.inView { opacity: 1; transform: translateY(0); }
-.inView { opacity: 1; transform: translateY(0); }
+.learnMoreButton {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.learnMoreButton:hover {
+  background-color: white;
+  color: black;
+}
 
+/* --- ADJUSTED Custom Controls --- */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
 
+.swiperButtonPrev,
+.swiperButtonNext {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.swiperButtonPrev:hover,
+.swiperButtonNext:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- NEW RULES FOR ARROW POSITIONING --- */
+
+/* Common styles for both arrows */
+.swiperButtonPrev,
+.swiperButtonNext {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiperButtonPrev {
+  left: -60px; /* Position the PREV arrow outside on the left */
+}
+
+.swiperButtonNext {
+  right: -60px; /* Position the NEXT arrow outside on the right */
+}
+
+/* Pagination Dots */
+.swiperPagination {
+  position: relative;
+  display: flex;
+  gap: 12px;
+}
+
+.swiperPaginationBullet {
+  width: 8px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 50%;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+.swiperPaginationBulletActive {
+  background-color: white;
+}

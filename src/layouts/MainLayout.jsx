@@ -1,9 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/common/Navbar";
-import Footer from "../components/common/Footer";
-import CookieBanner from "../components/common/CookieBanner";
-import SearchOverlay from "../components/common/SearchOverlay";
+import Navbar from "../components/common/header/Navbar";
+import Footer from "../components/common/Footer/Footer";
+
+import SearchOverlay from "../components/common/search/SearchOverlay";
 
 const MainLayout = () => {
   return (
@@ -16,7 +16,7 @@ const MainLayout = () => {
         <Outlet />
       </main>
       <Footer />
-      <CookieBanner />
+
       <SearchOverlay />
     </div>
   );
